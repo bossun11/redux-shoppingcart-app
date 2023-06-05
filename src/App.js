@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
 import { calculateTotals } from "./features/cart/CartSlice";
+import Modal from "./components/Modal";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ function App() {
   }, [cartItems]);
   return (
     <main>
+      <Modal />
       <Navbar />
       <CartContainer />
     </main>
